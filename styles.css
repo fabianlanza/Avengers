@@ -60,4 +60,22 @@ main h1{
     background-color: var(--colorTarjeta);
     margin-top: 27px; 
     margin-bottom: 27px;
+    padding: 30px;
+    h2{
+        /* H2 dentro de la tarjeta */
+        color: var(--colorPrimario);
+        font-size: 32px;
+        font-weight: lighter;
+        border-bottom: 4px solid var(--colorPrimario);
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    p{
+        /* Parrafo de la tarjeta */
+        font-size: 12px;
+        font-weight: lighter;
+        line-height: 1.8;
+
+    }
 }
