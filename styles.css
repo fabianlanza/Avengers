@@ -58,9 +58,10 @@ main h1{
     width: 1000px; 
     height: 304px;
     background-color: var(--colorTarjeta);
-    margin-top: 27px; 
-    margin-bottom: 27px;
+    /* margin: top right bottom left*/
+    margin: 27px auto 27px auto; 
     padding: 30px;
+    
     h2{
         /* H2 dentro de la tarjeta */
         color: var(--colorPrimario);
@@ -78,4 +79,5 @@ main h1{
         line-height: 1.8;
 
     }
+
 }
