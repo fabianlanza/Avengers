@@ -13,6 +13,8 @@
 
 html{
     font-family: sans-serif;
+    scroll-behavior: smooth;
+   
 }
 
 body{
@@ -22,13 +24,15 @@ body{
 header
 {
     background-color: var(--colorPrimario);
+    position: fixed;
+    width: 100%;
+    top: 0;
     
     nav{
         height: 90px;
         display: flex;
         justify-content: center;
         align-items: center;
-        
         a{
             color: white;
             margin: 25px;
@@ -39,12 +43,13 @@ header
 }
 
 main {
+    margin-top: 162px;
 
     h1{
         margin: 62px 0 0 0;
         text-align: center;
         color: #E23636;
-        font-family: Avengeance;
+        font-family: Avengeance Heroic Avenger;
         font-size: 64px;
     }
 
@@ -64,7 +69,7 @@ main {
                 color: var(--colorPrimario);
                 font-size: 32px;
                 font-weight: lighter;
-                border-bottom: 4px solid var(--colorPrimario);
+                /* border-bottom: 4px solid var(--colorPrimario); */
                 margin-bottom: 12px;
                 line-height: 1.5;
             }
@@ -75,7 +80,16 @@ main {
                 line-height: 1.8;
                 /* font-family: 'Comic'; */
             }
+
+            hr{
+                background-color: var(--colorPrimario);
+                height: 5px;
+                border: none;
+                border-radius: 5px;
+            }
+
         }
+
 
         .tarjetaIntroduccion-imagenes{
             img{
@@ -88,7 +102,7 @@ main {
     
     .tarjetaHistoria{
         width: 1000px;
-        /* height: 304px; */
+        /*height: 900px;*/
         background-color: var(--colorTarjeta);
         margin: 25px auto 25px auto;
         padding: 30px;
@@ -100,23 +114,29 @@ main {
             color: var(--colorPrimario);
             font-size: 32px;
             font-weight: lighter;
-            border-bottom: 4px solid var(--colorPrimario);
+            /* border-bottom: 4px solid var(--colorPrimario); */
             margin-bottom: 12px;
             line-height: 1.5;
         }
 
         .tarjetaHistoria-contenido{
-
             display: flex;
             flex-direction: column;
             width: 80;
-           
-        
+
 
             h3{
                 font-size: 32px;
                 color: var(--colorSecundario);
                 font-weight: lighter;
+            }
+
+            hr{
+                background-color: var(--colorPrimario);
+                height: 5px;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 40px;
             }
 
             p{
@@ -126,29 +146,27 @@ main {
                 /* font-family: 'Comic'; */
             }
 
-
             .cajas{
-                columns: 2;
-                
-                .cajitas{
-                    /* width: 260; */
-                    
+               columns: 2;
+               /*column-gap: 15px;*/
+
+            
+                .cajita{
+                    /*width: 260;*/
+                    /*height: 177px;*/
                     background-color: var(--colorTarjeta);
-                    box-shadow: 5px 4px 6px 1px rgba(0, 0, 0, 0.4) ;
+                    box-shadow: 5px 4px 6px 1px rgb(0, 0, 0, 0.4);
                     margin-bottom: 20px;
                     padding: 20px;
                 }
             }
-
-
-
         }
 
         .tarjetaHistoria-imagenes{
             width: 240px;
             margin-top: 50px;
             img{
-                width: 240px;
+                width: 100%;
                 border-radius: 5px;
                 margin-top: 50px;
             }
@@ -157,5 +175,6 @@ main {
     
     
 
+    
     
 }
