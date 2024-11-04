@@ -1,51 +1,60 @@
-:root{
-    --colorPrimario:#E23636;
-    --colorSecundario:#518CCA;
-    --colorFondo:#f4f4f4;
-    --colorTarjeta:#FFFFFF;
+:root {
+    --colorPrimario: #E23636;
+    --colorSecundario: #518CCA;
+    --colorFondo: #f4f4f4;
+    --colorTarjeta: #FFFFFF;
 } 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: sans-serif;
     scroll-behavior: smooth;
-   
 }
 
-body{
+body {
     background-color: var(--colorFondo);
 }
 
-header
-{
+header {
     background-color: var(--colorPrimario);
     position: fixed;
     width: 100%;
     top: 0;
-    
-    nav{
-        height: 90px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        a{
-            color: white;
-            margin: 25px;
-            text-decoration: none;
-            font-size: 24px;
-        }
-    }
+}
+
+header nav {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    margin: 25px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer {
+    background-color: var(--colorSecundario);
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    font-family: Avengeance Heroic Avenger;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 main {
     margin-top: 162px;
-
-    h1{
+    h1 {
         margin: 62px 0 0 0;
         text-align: center;
         color: #E23636;
@@ -53,128 +62,94 @@ main {
         font-size: 64px;
     }
 
-
-    .tarjetaIntroduccion{
-        width: 1000px;
-        height: 304px;
+    .tarjetaIntroduccion,
+    .tarjetaHistoria,
+    .tarjetaUnieron,
+    .tarjetaConstanteCambio {
+        
+        width: 90%; /* porcentaje para responsive */
+        max-width: 1000px; /* Max width para mantener diseno */
         background-color: var(--colorTarjeta);
         margin: 62px auto 25px auto;
         padding: 30px;
         display: flex;
         gap: 23px;
         box-shadow: 5px 4px 6px 1px rgba(0, 0, 0, 0.4);
-
-        .tarjetaIntroduccion-contenido{
-            h2{
-                color: var(--colorPrimario);
-                font-size: 32px;
-                font-weight: lighter;
-                /* border-bottom: 4px solid var(--colorPrimario); */
-                margin-bottom: 12px;
-                line-height: 1.5;
-            }
-
-            p{
-                font-size: 18px;
-                font-weight: lighter;
-                line-height: 1.8;
-                /* font-family: 'Comic'; */
-            }
-
-            hr{
-                background-color: var(--colorPrimario);
-                height: 5px;
-                border: none;
-                border-radius: 5px;
-            }
-
-        }
-
-
-        .tarjetaIntroduccion-imagenes{
-            img{
-                width: 240px;
-                border-radius: 5px;
-                margin-top: 50px;
-            }
-        }
+        flex-direction: column; /* poner elementos vertical */
     }
-    
-    .tarjetaHistoria{
-        width: 1000px;
-        /*height: 900px;*/
-        background-color: var(--colorTarjeta);
-        margin: 25px auto 25px auto;
-        padding: 30px;
-        display: flex;
-        gap: 23px;
-        box-shadow: 5px 4px 6px 1px rgba(0, 0, 0, 0.4);
 
-        h2{
+    .tarjetaIntroduccion-contenido,
+    .tarjetaHistoria-contenido,
+    .tarjetaUnieron-contenido,
+    .tarjetaConstanteCambio-contenido {
+        h2 {
             color: var(--colorPrimario);
             font-size: 32px;
             font-weight: lighter;
-            /* border-bottom: 4px solid var(--colorPrimario); */
             margin-bottom: 12px;
             line-height: 1.5;
         }
 
-        .tarjetaHistoria-contenido{
-            display: flex;
-            flex-direction: column;
-            width: 80;
-
-
-            h3{
-                font-size: 32px;
-                color: var(--colorSecundario);
-                font-weight: lighter;
-            }
-
-            hr{
-                background-color: var(--colorPrimario);
-                height: 5px;
-                border: none;
-                border-radius: 5px;
-                margin-bottom: 40px;
-            }
-
-            p{
-                font-size: 18px;
-                font-weight: lighter;
-                line-height: 1.8;
-                /* font-family: 'Comic'; */
-            }
-
-            .cajas{
-               columns: 2;
-               /*column-gap: 15px;*/
-
-            
-                .cajita{
-                    /*width: 260;*/
-                    /*height: 177px;*/
-                    background-color: var(--colorTarjeta);
-                    box-shadow: 5px 4px 6px 1px rgb(0, 0, 0, 0.4);
-                    margin-bottom: 20px;
-                    padding: 20px;
-                }
-            }
+        hr {
+            background-color: var(--colorPrimario);
+            height: 5px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 12px;
         }
 
-        .tarjetaHistoria-imagenes{
-            width: 240px;
-            margin-top: 50px;
-            img{
-                width: 100%;
-                border-radius: 5px;
-                margin-top: 50px;
-            }
+        p {
+            font-size: 18px;
+            font-weight: lighter;
+            line-height: 1.8;
         }
     }
-    
-    
+
+    .tarjetaIntroduccion-imagenes,
+    .tarjetaHistoria-imagenes,
+    .tarjetaUnieron-imagenes,
+    .tarjetaConstanteCambio-imagenes {
+        img {
+            max-width: 30%; /* Para que imagenes sean repsonsive */
+            height: auto; /* Mantener aspect ratio */
+            border-radius: 5px;
+            margin-top: 10px; 
+        }
+    }
+
+    .tarjetaHistoria .cajas {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between; /*Espacio entre cajas */
+        margin-top: 12px;
+    }
+
+    .tarjetaHistoria .cajas .cajita {
+        width: calc(50% - 10px); 
+        background-color: var(--colorTarjeta);
+        box-shadow: 5px 4px 6px 1px rgba(0, 0, 0, 0.4);
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 5px; 
+    }
+
+    .tarjetaHistoria-contenido h3{
+        font-size: 32px;
+        color: var(--colorSecundario);
+        font-weight: lighter;
+    }
 
     
-    
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .tarjetaHistoria .cajas .cajita {
+            width: calc(100% - 10px); /* Full width para pantalla pequenas */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tarjetaHistoria .cajas {
+            flex-direction: column; /*Cajas vertical */
+        }
+    }
 }
